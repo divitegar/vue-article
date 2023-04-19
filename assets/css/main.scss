@@ -1,0 +1,31 @@
+body {
+  margin: 0px;
+  font-family: "Oxygen", sans-serif;
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    color: #2B3A55;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #2B3A55;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
